@@ -1,0 +1,210 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #BEE1D6;
+  color: #1a1a1a;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(30, 50, 40, 0.5);
+  backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #15372b;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #0a1d11;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  margin-top: 60px;
+  color: #15372b;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(190, 225, 214, 0.7);
+  z-index: 0;
+  border-radius: 0 0 50% 50% / 30%;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  background: rgba(255 255 255 / 0.8);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #0a1d11;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  color: #274833;
+}
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.btn-primary {
+  background-color: #15372b;
+  color: #BEE1D6;
+}
+.btn-primary:hover {
+  background-color: #0a1d11;
+}
+.btn-secondary {
+  background-color: #BEE1D6;
+  color: #15372b;
+  border: 2px solid #15372b;
+  font-weight: 700;
+}
+.btn-secondary:hover {
+  background-color: #d2ede4;
+}
+
+/* FEATURES */
+.features {
+  max-width: 1200px;
+  margin: 80px auto 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 40px;
+  text-align: center;
+}
+.feature-item {
+  background: rgba(255 255 255 / 0.7);
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #15372b;
+}
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.feature-icon {
+  font-size: 48px;
+  color: #0a1d11;
+  margin-bottom: 20px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: rgba(255 255 255 / 0.8);
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+  border-radius: 15px;
+  color: #15372b;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0a1d11;
+  font-weight: 700;
+}
+.testimonial {
+  font-style: italic;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #274833;
+}
+.testimonial cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #0a1d11;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(21, 55, 43, 0.8);
+  color: #d6f0e3;
+  text-align: center;
+  padding: 25px 20px;
+  font-weight: 500;
+}
+footer a {
+  color: #d2ede4;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1.1rem; }
+  .features { grid-template-columns: 1fr; }
+}
